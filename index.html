@@ -7,8 +7,8 @@
 
     <style>
         body {
-            background: #121212;
-            color: white;
+            background: #000000;
+            color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 40px;
@@ -16,8 +16,71 @@
 
         h1 {
             margin-bottom: 40px;
+            font-size: 42px;
+            letter-spacing: 1px;
         }
 
+        /* Search + Sort Container */
+        .controls {
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        #searchBar {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #111;
+            color: white;
+            font-size: 16px;
+        }
+
+        #searchBar::placeholder {
+            color: #777;
+        }
+
+        .sort-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .sort-btn:hover {
+            background: #444;
+        }
+
+        /* Alphabet Bar */
+        .alphabet-bar {
+            margin: 25px auto;
+            max-width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .alphabet-bar span {
+            padding: 8px 12px;
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+            transition: 0.2s;
+        }
+
+        .alphabet-bar span:hover {
+            background: #333;
+        }
+
+        /* Game Grid */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -27,10 +90,16 @@
         }
 
         .game-card {
-            background: #1e1e1e;
+            background: #111111;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px #000;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px #222;
         }
 
         .download-btn {
@@ -54,155 +123,143 @@
 
     <h1>Steam Keys</h1>
 
-    <div class="grid-container">
-
-        <div class="game-card">
-            <h2>Call of Duty: Black Ops II</h2>
-            <a href="Call of Duty Black Ops II.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Call of Duty: Black Ops 3</h2>
-            <a href="call of duty black ops 3.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Clair Obscur: Expedition 33</h2>
-            <a href="Clair Obscur Expedition 33.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Cyberpunk 2077</h2>
-            <a href="cyperpunk 2077.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Elden Ring: Nightreign</h2>
-            <a href="ELDEN RING NIGHTREIGN.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Elden Ring</h2>
-            <a href="ELDEN RING.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Final Fantasy VII Remake Intergrade</h2>
-            <a href="FINAL FANTASY VII REMAKE INTERGRADE.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>God of War Ragnarök</h2>
-            <a href="God of War Ragnarök.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Grand Theft Auto V Legacy</h2>
-            <a href="Grand Theft Auto V Legacy.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Marvel's Spider-Man: Miles Morales</h2>
-            <a href="Marvel's Spider Man Miles Morales.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Marvel's Spider-Man 2</h2>
-            <a href="Marvel's Spider-Man 2.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Red Dead Redemption 2</h2>
-            <a href="Red Dead Redemption 2.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Red Dead Redemption</h2>
-            <a href="Red Dead Redemption.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Resident Evil 4</h2>
-            <a href="Resident Evil 4.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Sekiro™: Shadows Die Twice</h2>
-            <a href="Sekiro™ Shadows Die Twice.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Split Fiction</h2>
-            <a href="Split Fiction.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Stronghold Crusader 2</h2>
-            <a href="Stronghold Crusader 2.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Stronghold Crusader: Definitive Edition</h2>
-            <a href="Stronghold Crusader Definitive Edition.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
-        <div class="game-card">
-            <h2>Stronghold Crusader HD</h2>
-            <a href="Stronghold Crusader HD.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-                <div class="game-card">
-            <h2>Devil May Cry 4 Special Edition</h2>
-            <a href="Devil May Cry 4 Special Edition.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-                <div class="game-card">
-            <h2>Devil May Cry HD Collection</h2>
-            <a href="Devil May Cry HD Collection.zip" download>
-                <button class="download-btn">Download</button>
-            </a>
-        </div>
-
+    <!-- Search + Sort Controls -->
+    <div class="controls">
+        <input id="searchBar" type="text" placeholder="Search games...">
+        <button onclick="sortAZ()" class="sort-btn">Sort A → Z</button>
     </div>
 
+    <!-- Alphabet Filter -->
+    <div class="alphabet-bar">
+        <span onclick="filterByLetter('ALL')">ALL</span>
+        <span onclick="filterByLetter('A')">A</span>
+        <span onclick="filterByLetter('B')">B</span>
+        <span onclick="filterByLetter('C')">C</span>
+        <span onclick="filterByLetter('D')">D</span>
+        <span onclick="filterByLetter('E')">E</span>
+        <span onclick="filterByLetter('F')">F</span>
+        <span onclick="filterByLetter('G')">G</span>
+        <span onclick="filterByLetter('H')">H</span>
+        <span onclick="filterByLetter('I')">I</span>
+        <span onclick="filterByLetter('J')">J</span>
+        <span onclick="filterByLetter('K')">K</span>
+        <span onclick="filterByLetter('L')">L</span>
+        <span onclick="filterByLetter('M')">M</span>
+        <span onclick="filterByLetter('N')">N</span>
+        <span onclick="filterByLetter('O')">O</span>
+        <span onclick="filterByLetter('P')">P</span>
+        <span onclick="filterByLetter('Q')">Q</span>
+        <span onclick="filterByLetter('R')">R</span>
+        <span onclick="filterByLetter('S')">S</span>
+        <span onclick="filterByLetter('T')">T</span>
+        <span onclick="filterByLetter('U')">U</span>
+        <span onclick="filterByLetter('V')">V</span>
+        <span onclick="filterByLetter('W')">W</span>
+        <span onclick="filterByLetter('X')">X</span>
+        <span onclick="filterByLetter('Y')">Y</span>
+        <span onclick="filterByLetter('Z')">Z</span>
+    </div>
+
+    <div class="grid-container" id="gameGrid">
+
+        <!-- GAME CARDS -->
+        <!--A-->
+        <!--B-->
+        <!--C-->
+        <div class="game-card"><h2>Call of Duty: Black Ops II</h2><a href="Call of Duty Black Ops II.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Call of Duty: Black Ops 3</h2><a href="call of duty black ops 3.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Clair Obscur: Expedition 33</h2><a href="Clair Obscur Expedition 33.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Cyberpunk 2077</h2><a href="cyperpunk 2077.zip" download><button class="download-btn">Download</button></a></div>
+        <!--D-->
+        <div class="game-card"><h2>Devil May Cry 4 Special Edition</h2><a href="Devil May Cry 4 Special Edition.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Devil May Cry HD Collection</h2><a href="Devil May Cry HD Collection.zip" download><button class="download-btn">Download</button></a></div>
+        <!--E-->
+        <div class="game-card"><h2>Elden Ring: Nightreign</h2><a href="ELDEN RING NIGHTREIGN.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Elden Ring</h2><a href="ELDEN RING.zip" download><button class="download-btn">Download</button></a></div>
+        <!--F-->
+        <div class="game-card"><h2>Final Fantasy VII Remake Intergrade</h2><a href="FINAL FANTASY VII REMAKE INTERGRADE.zip" download><button class="download-btn">Download</button></a></div>
+        <!--G-->
+        <div class="game-card"><h2>God of War Ragnarök</h2><a href="God of War Ragnarök.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Grand Theft Auto V Legacy</h2><a href="Grand Theft Auto V Legacy.zip" download><button class="download-btn">Download</button></a></div>
+        <!--H-->
+        <!--I-->
+        <!--J-->
+        <!--K-->
+        <!--L-->
+        <!--M-->
+        <div class="game-card"><h2>Marvel's Spider-Man: Miles Morales</h2><a href="Marvel's Spider Man Miles Morales.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Marvel's Spider-Man 2</h2><a href="Marvel's Spider-Man 2.zip" download><button class="download-btn">Download</button></a></div>
+        <!--N-->
+        <div class="game-card"><h2>Need for Speed™ Rivals</h2><a href="Need for Speed™ Rivals.zip" download><button class="download-btn">Download</button></a></div>
+        <!--O-->
+        <!--P-->
+        <!--Q-->
+        <!--R-->
+        <div class="game-card"><h2>Red Dead Redemption 2</h2><a href="Red Dead Redemption 2.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Red Dead Redemption</h2><a href="Red Dead Redemption.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Resident Evil 4</h2><a href="Resident Evil 4.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Resident Evil 2</h2><a href="Resident Evil 2.zip" download><button class="download-btn">Download</button></a></div>
+        <!--S-->
+        <div class="game-card"><h2>Sekiro™: Shadows Die Twice</h2><a href="Sekiro™ Shadows Die Twice.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Split Fiction</h2><a href="Split Fiction.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Stronghold Crusader 2</h2><a href="Stronghold Crusader 2.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Stronghold Crusader: Definitive Edition</h2><a href="Stronghold Crusader Definitive Edition.zip" download><button class="download-btn">Download</button></a></div>
+        <div class="game-card"><h2>Stronghold Crusader HD</h2><a href="Stronghold Crusader HD.zip" download><button class="download-btn">Download</button></a></div>
+        <!--T-->
+        <!--U-->
+        <!--V-->
+        <!--W-->
+        <!--X-->
+        <!--Y-->
+        <!--Z-->
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const searchBar = document.getElementById("searchBar");
+        const gameGrid = document.getElementById("gameGrid");
+
+        // SEARCH FUNCTION
+        searchBar.addEventListener("input", () => {
+            const term = searchBar.value.toLowerCase();
+            const cards = document.querySelectorAll(".game-card");
+
+            cards.forEach(card => {
+                const title = card.querySelector("h2").textContent.toLowerCase();
+                card.style.display = title.includes(term) ? "block" : "none";
+            });
+        });
+
+        // SORT A-Z FUNCTION
+        function sortAZ() {
+            const cards = Array.from(document.querySelectorAll(".game-card"));
+
+            cards.sort((a, b) => {
+                const titleA = a.querySelector("h2").textContent.toLowerCase();
+                const titleB = b.querySelector("h2").textContent.toLowerCase();
+                return titleA.localeCompare(titleB);
+            });
+
+            cards.forEach(card => gameGrid.appendChild(card));
+        }
+
+        // ALPHABET FILTER
+        function filterByLetter(letter) {
+            const cards = document.querySelectorAll(".game-card");
+
+            cards.forEach(card => {
+                const title = card.querySelector("h2").textContent.trim().toUpperCase();
+
+                if (letter === "ALL") {
+                    card.style.display = "block";
+                } else if (title.startsWith(letter)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
